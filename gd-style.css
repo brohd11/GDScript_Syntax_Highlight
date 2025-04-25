@@ -2,7 +2,9 @@
     /* Define GDScript highlight.js colors */
     --background-color: #0e1012;
     --text-color: #ccced3;
+    --annotation-color: #ffb373;
     --symbol-color: #abc8ff;
+    --member-variable-color: #bce0ff;
     --keyword-color: #ff7085;
     --control_flow_keyword-color: #ff8ccc;
     --base_type-color: #42ffc2;
@@ -11,6 +13,8 @@
     --string-color: #ffeca1;
     --number-color: #a1ffe0;
     --function_definition-color: #66e6ff;
+    --function-color: #57b3ff;
+    --global-func-color: #a3a3f5;
 }
 
 pre,
@@ -20,8 +24,18 @@ code.hljs {
     color: var(--text-color);
 }
 
-code.hljs .hljs-symbol {
-    color: var(--symbol-color);
+code.hljs .hljs-annotations {
+    color: var(--annotation-color);
+}
+
+
+
+code.hljs .hljs-signal {
+    color: var(--member-variable-color);
+}
+
+code.hljs .hljs-variable {
+    color: var(--member-variable-color);
 }
 
 code.hljs .hljs-keyword {
@@ -56,6 +70,23 @@ code.hljs .hljs-title {
     color: var(--function_definition-color);
 }
 
+code.hljs .hljs-return_type {
+    color: var(--base_type-color);
+}
+
+code.hljs .hljs-function_call{
+    color: var(--function-color);
+}
+
+code.hljs .hljs-global_func{
+    color: var(--global-func-color);
+}
+
+code.hljs .hljs-symbol {
+    color: var(--symbol-color);
+    /* color: black; */
+}
+
 code.hljs .hljs-name,
 code.hljs .hljs-tag,
 code.hljs .hljs-attr {
@@ -67,7 +98,7 @@ code {
     padding: 5px 20px;
     display: block;
     position: relative;
-    font-size: 0.9em;
+    font-size: 1.1em;
     text-align: initial;
     tab-size: 4;
     line-height: 2;
