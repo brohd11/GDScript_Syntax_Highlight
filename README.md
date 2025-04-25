@@ -1,7 +1,7 @@
 # GDSCript Syntax Highlight
 
 ## Fork of DinDeprecated's fork. Updated for Godot 4.0, and can handle more of the syntax. 
-Unsure of performance, a few more rules were added. Updated to Hihglightjs 11, though some may still be outdated, I'm not that familiar with it!
+Unsure of performance, a few more rules were added. Updated to Highlightjs 11, though some may still be outdated, I'm not that familiar with it!
 
 ### Usage
 Used to highlight GDScript syntax on HTML.
