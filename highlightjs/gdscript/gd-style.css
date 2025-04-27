@@ -9,6 +9,7 @@
     --control_flow_keyword-color: #ff8ccc;
     --base_type-color: #42ffc2;
     --engine_type-color: #8effda;
+    --user_type-color: #c7ffed;
     --comment-color: grey;
     --string-color: #ffeca1;
     --number-color: #a1ffe0;
@@ -17,18 +18,13 @@
     --global-func-color: #a3a3f5;
 }
 
-pre,
-code,
-code.hljs {
-    background: var(--background-color);
-    color: var(--text-color);
+code.hljs .hljs-class_name {
+    color: var(--user_type-color);
 }
 
 code.hljs .hljs-annotations {
     color: var(--annotation-color);
 }
-
-
 
 code.hljs .hljs-signal {
     color: var(--member-variable-color);
@@ -52,6 +48,10 @@ code.hljs .hljs-base_type {
 
 code.hljs .hljs-engine_type {
     color: var(--engine_type-color);
+}
+
+code.hljs .hljs-user_type {
+    color: var(--user_type-color);
 }
 
 code.hljs .hljs-comment {
@@ -84,13 +84,26 @@ code.hljs .hljs-global_func{
 
 code.hljs .hljs-symbol {
     color: var(--symbol-color);
-    /* color: black; */
 }
 
 code.hljs .hljs-name,
 code.hljs .hljs-tag,
 code.hljs .hljs-attr {
     color: var(--html-color);
+}
+
+pre,
+code,
+code.hljs {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+pre,
+code,
+code.hljs {
+    background: var(--background-color);
+    color: var(--text-color);
 }
 
 code {

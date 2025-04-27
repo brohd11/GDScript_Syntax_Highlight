@@ -1,4 +1,5 @@
 import GDKeywords from "./gd-keywords.js"
+import UserTypes from "./user-types.js"
 
 const builtInNamesArray = GDKeywords.builtInNames
 const escapedBuiltInNames = builtInNamesArray
@@ -20,6 +21,7 @@ export function initHighlight(){
                         control_flow_keyword: GDKeywords.controlFlowKeywords,
                         base_type: GDKeywords.baseTypes,
                         engine_type: GDKeywords.engineTypes,
+                        user_type: UserTypes.userTypes
                         //function_definition: = GDKeywords.functionDefinitions
                     },
                     contains: [
