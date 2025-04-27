@@ -32,9 +32,20 @@ export function initHighlight(){
                     e.QUOTE_STRING_MODE,
                     // {
                     //     variants: [
-                        
+
+
                     {scope: "class", beginKeywords: "class" },
+                    
                     {scope: "symbol", begin:/[()\-:=>,\.]/},
+                    { 
+                        scope: "class_name", 
+                        begin: /class_name\s+/,
+                        end: /\s+/,
+                        excludeBegin: true,
+                        excludeEnd: true,
+                        // endScope:"base_type",
+                        // illegal: /\S/,
+                    },
                     {
                         scope:"annotations", 
                         begin: /@[\w]+/,
@@ -86,6 +97,7 @@ export function initHighlight(){
                         endScope: "symbol",
                         relevance: 0, 
                     },
+                    
                     ],
                         // end: /\w*(?=[?()]{2,})/,
                         // contains: [e.UNDERSCORE_TITLE_MODE]
@@ -100,4 +112,24 @@ export function initHighlight(){
         
         }()
     );
+};
+
+
+export function setClassHighlight(classStr){
+    console.log("WORKING")
+    const codeElements = document.querySelectorAll(classStr);
+    console.log(codeElements);
+    codeElements.forEach(element => {
+        hljs.highlightElement(element); // Highlight the element
+    });
+};
+
+document.addEventListener("DOMContentLoaded", highlight)
+
+initHighlight();
+
+function highlight(){
+    hljs.highlightAll();
+    //setClassHighlight(".gdscript-code"); // this can be used if you don't want to highlight all
 }
+
