@@ -15,27 +15,19 @@ export function initHighlight(){
             function r(e) {
                 return {
                     aliases: ["godot", "gdscript"],
-                        keywords: {
-                            keyword: GDKeywords.keywords,
-                            control_flow_keyword: GDKeywords.controlFlowKeywords,
-                            base_type: GDKeywords.baseTypes,
-                            engine_type: GDKeywords.engineTypes,
-                            //function_definition: = GDKeywords.functionDefinitions
+                    keywords: {
+                        keyword: GDKeywords.keywords,
+                        control_flow_keyword: GDKeywords.controlFlowKeywords,
+                        base_type: GDKeywords.baseTypes,
+                        engine_type: GDKeywords.engineTypes,
+                        //function_definition: = GDKeywords.functionDefinitions
                     },
-                    
                     contains: [
                     e.NUMBER_MODE,
-                    // hljs.COMMENT('#', '$'),
                     e.HASH_COMMENT_MODE,
                     {scope: "comment", begin: /"""/, end: /"""/ },
-                    
                     e.QUOTE_STRING_MODE,
-                    // {
-                    //     variants: [
-
-
                     {scope: "class", beginKeywords: "class" },
-                    
                     {scope: "symbol", begin:/[()\-:=>,\.]/},
                     { 
                         scope: "class_name", 
@@ -43,8 +35,6 @@ export function initHighlight(){
                         end: /\s+/,
                         excludeBegin: true,
                         excludeEnd: true,
-                        // endScope:"base_type",
-                        // illegal: /\S/,
                     },
                     {
                         scope:"annotations", 
@@ -97,12 +87,7 @@ export function initHighlight(){
                         endScope: "symbol",
                         relevance: 0, 
                     },
-                    
                     ],
-                        // end: /\w*(?=[?()]{2,})/,
-                        // contains: [e.UNDERSCORE_TITLE_MODE]
-                    // }
-                    // ]
                 }
             } return e.exports = function(e) {
                 e.registerLanguage("gdscript", r)
