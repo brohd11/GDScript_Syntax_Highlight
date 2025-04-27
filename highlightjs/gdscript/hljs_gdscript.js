@@ -101,9 +101,7 @@ export function initHighlight(){
 
 
 export function setClassHighlight(classStr){
-    console.log("WORKING")
     const codeElements = document.querySelectorAll(classStr);
-    console.log(codeElements);
     codeElements.forEach(element => {
         hljs.highlightElement(element); // Highlight the element
     });
@@ -116,5 +114,6 @@ initHighlight();
 function highlight(){
     hljs.highlightAll();
     //setClassHighlight(".gdscript-code"); // this can be used if you don't want to highlight all
+    document.removeEventListener("DOMContentLoaded", highlight);
 }
 

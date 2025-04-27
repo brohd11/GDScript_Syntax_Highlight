@@ -6,14 +6,19 @@ Unsure of performance, a few more rules were added. Updated to Highlightjs 11, t
 ### Usage
 Used to highlight GDScript syntax on HTML.
 
-To use it, include these first in the head tags:
+Copy highlightjs folder and contents to root.
+
+Include highlightjs remote files and local files in the head tags:
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css">
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
-```
 
-Then you can use the css and highlightjs script in this repo.
+<link rel="stylesheet" href="/highlightjs/gdscript/gd-style.css">
+<script type="module" src="/highlightjs/gdscript/hljs_gdscript.js"></script>
+```
+'gd-keywords.js' stores the keywords and are still being updated.
+'hljs-gdscript.js' will run on 'DOMContentLoaded'.
 
 ---
 
