@@ -17,7 +17,7 @@ Include highlightjs remote files and local files in the head tags:
 <link rel="stylesheet" href="/highlightjs/gdscript/gd-style.css">
 <script type="module" src="/highlightjs/gdscript/hljs_gdscript.js"></script>
 ```
-'gd-keywords.js' stores the keywords and are still being updated.
+'gd-keywords.js' stores the keywords, should be up to date.
 'hljs-gdscript.js' will run on 'DOMContentLoaded'.
 
 ---
