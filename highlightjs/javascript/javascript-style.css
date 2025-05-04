@@ -1,0 +1,47 @@
+.language-javascript {
+    --background-color: #0e1012;
+    --text-color: #76c7db;
+    --class-color: rgb(79, 172, 125);
+    --variable-color: #9bcbe0;
+    --property-color: #4da8d3;
+    --keyword-color: #204281;
+    --comment-color: grey;
+    --string-color: #d8785a;
+    --number-color: #a1ffe0;
+    --function_definition-color: #bfca80;
+}
+
+
+code.hljs.language-javascript .hljs-title.class_ {
+    color: var(--class-color);
+}
+
+code.hljs.language-javascript .hljs-title {
+    color: var(--function_definition-color);
+}
+
+code.hljs.language-javascript .hljs-variable {
+    color: var(--variable-color);
+}
+
+code.hljs.language-javascript .hljs-property {
+    color: var(--property-color);
+}
+
+code.hljs.language-javascript .hljs-keyword {
+    color: var(--keyword-color);
+}
+
+code.hljs.language-javascript .hljs-comment {
+    color: var(--comment-color);
+}
+
+code.hljs.language-javascript .hljs-string {
+    color: var(--string-color)
+}
+
+code.hljs.language-javascript .hljs-number {
+    color: var(--number-color);
+}
+
+

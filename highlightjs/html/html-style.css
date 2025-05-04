@@ -1,0 +1,28 @@
+.language-html {
+    --background-color: #0e1012;
+    --text-color: #76c7db;
+    --comment-color: grey;
+    --string-color: #b17044;
+    --number-color: #a1ffe0;
+    --html-color: #50a0c5;
+}
+
+
+code.hljs.language-html .hljs-comment {
+    color: var(--comment-color);
+}
+
+code.hljs.language-html .hljs-string {
+    color: var(--string-color)
+}
+
+code.hljs.language-html .hljs-number {
+    color: var(--number-color);
+}
+
+code.hljs .hljs-name,
+code.hljs .hljs-tag,
+code.hljs .hljs-attr {
+    color: var(--html-color);
+}
+

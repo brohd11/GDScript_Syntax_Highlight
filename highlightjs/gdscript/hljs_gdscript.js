@@ -37,6 +37,8 @@ export function initHighlight(){
                         end: /\s+/,
                         excludeBegin: true,
                         excludeEnd: true,
+                        // endScope:"base_type",
+                        // illegal: /\S/,
                     },
                     {
                         scope:"annotations", 
@@ -101,21 +103,26 @@ export function initHighlight(){
     );
 };
 
-
 export function setClassHighlight(classStr){
     const codeElements = document.querySelectorAll(classStr);
+    if (codeElements.length === 0) {
+        return;
+    }
+    const gdElement = document.querySelector(".language-gdscript");
+    if (gdElement){
+        initHighlight();
+    }
     codeElements.forEach(element => {
-        hljs.highlightElement(element); // Highlight the element
+        hljs.highlightElement(element);
     });
 };
 
 document.addEventListener("DOMContentLoaded", highlight)
-
-initHighlight();
-
 function highlight(){
+    const gdElement = document.querySelector(".language-gdscript");
+    if (gdElement){
+        initHighlight();
+    }
     hljs.highlightAll();
-    //setClassHighlight(".gdscript-code"); // this can be used if you don't want to highlight all
     document.removeEventListener("DOMContentLoaded", highlight);
 }
-
