@@ -5,6 +5,7 @@
     --annotation-color: #ffb373;
     --symbol-color: #abc8ff;
     --member-variable-color: #bce0ff;
+    --node-ref-color: #63c259;
     --keyword-color: #ff7085;
     --control_flow_keyword-color: #ff8ccc;
     --base_type-color: #42ffc2;
@@ -28,6 +29,10 @@ code.hljs.language-gdscript .hljs-annotations {
 
 code.hljs.language-gdscript .hljs-signal {
     color: var(--member-variable-color);
+}
+
+code.hljs.language-gdscript .hljs-node_ref {
+    color: var(--node-ref-color);
 }
 
 code.hljs.language-gdscript .hljs-variable {
@@ -106,7 +111,7 @@ code.hljs {
     color: var(--text-color);
 }
 
-code {
+/* code {
     margin: 20px;
     padding: 5px 20px;
     display: block;
@@ -119,4 +124,4 @@ code {
 
 * {
     box-sizing: border-box;
-}
+} */

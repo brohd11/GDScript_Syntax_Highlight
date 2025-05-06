@@ -30,7 +30,13 @@ export function initHighlight(){
                     {scope: "comment", begin: /"""/, end: /"""/ },
                     e.QUOTE_STRING_MODE,
                     {scope: "class", beginKeywords: "class" },
-                    {scope: "symbol", begin:/[()\-:=>,\.]/},
+                    {
+                        scope:"node_ref", 
+                        begin: /\$[\w]+|%[\w]+/,
+                        end: /\s+/,
+                        relevance: 10
+                    },
+                    {scope: "symbol", begin:/[()\-:=>,{}%\.]/},
                     { 
                         scope: "class_name", 
                         begin: /class_name\s+/,
@@ -76,6 +82,13 @@ export function initHighlight(){
                         end: /\(/,
                         endScope:"symbol",
                         relevance:1,
+                    },
+                    {// strictly for setget
+                        scope: "function_call",
+                        begin: /\bget(?=:)/,
+                        end: /:/,       
+                        endScope: "symbol",
+                        relevance: 1,
                     },
                     {
                         scope: "variable",

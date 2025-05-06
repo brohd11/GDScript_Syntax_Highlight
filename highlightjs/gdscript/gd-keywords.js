@@ -1,7 +1,7 @@
 
 class GDKeywords{
 
-    static keywords = "class class_name const enum extends namespace signal static trait var await breakpoint self super yield set get"
+    static keywords = "class class_name const enum extends namespace signal static trait var await breakpoint self super yield true false"
 
     static controlFlowKeywords = "break continue elif else for if match pass return when while"
 
